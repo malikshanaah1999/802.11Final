@@ -5,11 +5,8 @@
 
 `timescale 1ns/10ps
 
-module scrambler (
-    Clock,
-    Reset,
-    Input,
-    Output
+module Scrambler (
+    Input, Reset, Clock, Output
 );
 
 
