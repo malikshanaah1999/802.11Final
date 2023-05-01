@@ -1,6 +1,6 @@
-`include "Scrambler.v"
-`include "ConvEncoder.v"
-`include "Interleaver.v"
+`include "scrambler.v"
+`include "encoder.v"
+`include "interleaver.v"
 
 module Transmitter(Start, Input, Reset, Clock, Clock2, Output);
 
