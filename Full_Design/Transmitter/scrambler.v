@@ -1,4 +1,4 @@
-module Scrambler(Input, Reset, Clock, Output);
+module scrambler(Input, Reset, Clock, Output);
 
     input wire Input;
     input wire Reset;
