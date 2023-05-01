@@ -1,4 +1,4 @@
-module ConvEncoder(Input, Reset, Clock, Output);
+module encoder(Input, Reset, Clock, Output);
 
     input wire Input;
     input wire Reset;
