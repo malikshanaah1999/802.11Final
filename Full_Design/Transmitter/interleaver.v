@@ -1,4 +1,4 @@
-module Interleaver(Input, Reset, Clock, Output);
+module interleaver(Input, Reset, Clock, Output);
 
     input wire Input;
     input wire Reset;
