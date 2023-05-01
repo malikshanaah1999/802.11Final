@@ -19,7 +19,7 @@ module Transmitter(Start, Input, Reset, Clock, Clock2, Output);
     wire scrambler_out;
     reg scrambler_reset;
     reg scrambler_in;
-    Scrambler scrambler(
+    scrambler scrambl(
         .Input(scrambler_in),
         .Reset(scrambler_reset),
         .Clock(Clock),
@@ -70,7 +70,7 @@ module Transmitter(Start, Input, Reset, Clock, Clock2, Output);
     //      If we were in DATA frame scrambler out should be coded else transmitter out
     //Only the data part will be coded
     assign encoder_in = (CURRENT_STATE >= DATA_SERVICE_STATE) ? scrambler_out : transmitter_out;
-    ConvEncoder convencoder(
+    encoder enc(
         .Input(encoder_in),
         .Reset(encoder_reset),
         .Clock(Clock2),
@@ -89,7 +89,7 @@ module Transmitter(Start, Input, Reset, Clock, Clock2, Output);
         else
             interleaver_reset <= 1'b0;
     end
-    Interleaver interleaver(
+    interleaver interl(
         .Input(encoder_out),
         .Clock(Clock2),
         .Reset(interleaver_reset),
