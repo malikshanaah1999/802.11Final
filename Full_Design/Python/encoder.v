@@ -5,7 +5,7 @@
 
 `timescale 1ns/10ps
 
-module ConvEncoder (
+module encoder (
     Input, Reset, Clock, Output
 );
 
