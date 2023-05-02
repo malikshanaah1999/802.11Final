@@ -5,7 +5,7 @@
 
 `timescale 1ns/10ps
 
-module Interleaver (
+module interleaver (
     Input, Reset, Clock, Output
 );
 
