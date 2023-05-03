@@ -1,0 +1,33 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : scrambler
+Version: N-2017.09-SP3
+Date   : Wed May  3 11:45:34 2023
+****************************************
+
+Operating Conditions: nom_pvt   Library: lsi_10k
+Wire Load Model Mode: top
+
+  Startpoint: state_reg[4]
+              (rising edge-triggered flip-flop)
+  Endpoint: Output (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  state_reg[4]/CP (FD4)                    0.00       0.00 r
+  state_reg[4]/QN (FD4)                    1.94       1.94 r
+  U11/Z (EN)                               1.26       3.19 f
+  U10/Z (EO)                               1.06       4.25 f
+  Output (out)                             0.00       4.25 f
+  data arrival time                                   4.25
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

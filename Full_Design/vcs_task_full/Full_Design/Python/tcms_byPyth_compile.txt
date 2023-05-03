@@ -1,0 +1,73 @@
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'scrambler'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'scrambler' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'scrambler'
+  Mapping 'scrambler'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+    0:00:00      45.2      0.00       0.0       0.0                          
+Loading db file '/Disk2/eda/TSMCLibes/tcbn90ghpSYN/saed90nm_typ.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1

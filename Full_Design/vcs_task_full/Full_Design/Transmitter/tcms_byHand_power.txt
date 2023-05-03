@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : scrambler
+Version: N-2017.09-SP3
+Date   : Wed May  3 11:48:46 2023
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ (File: /Disk2/eda/TSMCLibes/tcbn90ghpSYN/saed90nm_typ.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+scrambler              8000              saed90nm_typ
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   3.2715 uW   (73%)
+  Net Switching Power  =   1.2261 uW   (27%)
+                         ---------
+Total Dynamic Power    =   4.4977 uW  (100%)
+
+Cell Leakage Power     =   1.0956 uW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.7127        6.5869e-02        9.3601e+05            1.7146  (  30.65%)
+combinational      2.5589            1.1603        1.5958e+05            3.8787  (  69.35%)
+--------------------------------------------------------------------------------------------------
+Total              3.2715 uW         1.2261 uW     1.0956e+06 pW         5.5933 uW
+1

@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : scrambler
+Version: N-2017.09-SP3
+Date   : Wed May  3 11:45:50 2023
+****************************************
+
+
+Library(s) Used:
+
+    lsi_10k (File: /Disk2/eda/synopsys/2017-18/RHELx86/SYN_2017.09-SP3/libraries/syn/lsi_10k.db)
+
+Information: The cells in your design are not characterized for internal power. (PWR-229)
+
+Operating Conditions: nom_pvt   Library: lsi_10k
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 0.100000ff
+    Time Units = 1ns
+    Dynamic Power Units = 100nW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   0.0000 nW    (0%)
+  Net Switching Power  =   1.8338 uW  (100%)
+                         ---------
+Total Dynamic Power    =   1.8338 uW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
+memory             0.0000            0.0000            0.0000               NA   (     N/A)
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)
+clock_network      0.0000            0.0000            0.0000               NA   (     N/A)
+register           0.0000            0.0000            0.0000               NA   (     N/A)
+sequential         0.0000           73.9670            0.0000               NA   (     N/A)
+combinational      0.0000        1.7598e+03            0.0000               NA   (     N/A)
+--------------------------------------------------------------------------------------------------
+Total              0.0000 nW     1.8338e+03 nW         0.0000               NA        
+1

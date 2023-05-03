@@ -1,0 +1,16 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : N-2017.09-SP3
+// Date      : Wed May  3 12:00:10 2023
+/////////////////////////////////////////////////////////////
+
+
+module scrambler ( Clock, Reset, Input, Output );
+  input Clock, Reset, Input;
+  output Output;
+  wire   n1;
+
+  DFFASX1 \state_reg[3]  ( .D(1'b0), .CLK(Clock), .SETB(Reset), .QN(n1) );
+  XOR2X1 U7 ( .IN1(n1), .IN2(Input), .Q(Output) );
+endmodule
+

@@ -1,0 +1,32 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : N-2017.09-SP3
+// Date      : Wed May  3 11:47:56 2023
+/////////////////////////////////////////////////////////////
+
+
+module scrambler ( Input, Reset, Clock, Output );
+  input Input, Reset, Clock;
+  output Output;
+  wire   feedback, n2, n3;
+  wire   [7:1] state;
+
+  DFFASX1 \state_reg[1]  ( .D(feedback), .CLK(Clock), .SETB(n3), .Q(state[1])
+         );
+  DFFASX1 \state_reg[2]  ( .D(state[1]), .CLK(Clock), .SETB(n3), .Q(state[2])
+         );
+  DFFASX1 \state_reg[3]  ( .D(state[2]), .CLK(Clock), .SETB(n3), .Q(state[3])
+         );
+  DFFASX1 \state_reg[4]  ( .D(state[3]), .CLK(Clock), .SETB(n3), .Q(state[4]), 
+        .QN(n2) );
+  DFFASX1 \state_reg[5]  ( .D(state[4]), .CLK(Clock), .SETB(n3), .Q(state[5])
+         );
+  DFFASX1 \state_reg[6]  ( .D(state[5]), .CLK(Clock), .SETB(n3), .Q(state[6])
+         );
+  DFFASX1 \state_reg[7]  ( .D(state[6]), .CLK(Clock), .SETB(n3), .Q(state[7])
+         );
+  INVX0 U9 ( .INP(Reset), .ZN(n3) );
+  XOR2X1 U10 ( .IN1(Input), .IN2(feedback), .Q(Output) );
+  XNOR2X1 U11 ( .IN1(n2), .IN2(state[7]), .Q(feedback) );
+endmodule
+

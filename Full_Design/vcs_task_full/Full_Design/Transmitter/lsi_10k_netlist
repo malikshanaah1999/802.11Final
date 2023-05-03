@@ -1,0 +1,26 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : N-2017.09-SP3
+// Date      : Wed May  3 11:44:29 2023
+/////////////////////////////////////////////////////////////
+
+
+module scrambler ( Input, Reset, Clock, Output );
+  input Input, Reset, Clock;
+  output Output;
+  wire   feedback, n2, n10;
+  wire   [7:1] state;
+
+  FD4 \state_reg[4]  ( .D(state[3]), .CP(Clock), .SD(n10), .Q(state[4]), .QN(
+        n2) );
+  FD4 \state_reg[7]  ( .D(state[6]), .CP(Clock), .SD(n10), .Q(state[7]) );
+  FD4 \state_reg[1]  ( .D(feedback), .CP(Clock), .SD(n10), .Q(state[1]) );
+  FD4 \state_reg[2]  ( .D(state[1]), .CP(Clock), .SD(n10), .Q(state[2]) );
+  FD4 \state_reg[3]  ( .D(state[2]), .CP(Clock), .SD(n10), .Q(state[3]) );
+  FD4 \state_reg[5]  ( .D(state[4]), .CP(Clock), .SD(n10), .Q(state[5]) );
+  FD4 \state_reg[6]  ( .D(state[5]), .CP(Clock), .SD(n10), .Q(state[6]) );
+  IV U9 ( .A(Reset), .Z(n10) );
+  EO U10 ( .A(Input), .B(feedback), .Z(Output) );
+  EN U11 ( .A(n2), .B(state[7]), .Z(feedback) );
+endmodule
+

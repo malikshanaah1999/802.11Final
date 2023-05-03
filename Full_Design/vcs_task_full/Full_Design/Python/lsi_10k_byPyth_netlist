@@ -1,0 +1,16 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : N-2017.09-SP3
+// Date      : Wed May  3 11:54:40 2023
+/////////////////////////////////////////////////////////////
+
+
+module scrambler ( Clock, Reset, Input, Output );
+  input Clock, Reset, Input;
+  output Output;
+  wire   n2;
+
+  FD4 \state_reg[3]  ( .D(1'b0), .CP(Clock), .SD(Reset), .QN(n2) );
+  EO U8 ( .A(n2), .B(Input), .Z(Output) );
+endmodule
+

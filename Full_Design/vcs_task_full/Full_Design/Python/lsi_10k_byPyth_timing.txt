@@ -1,0 +1,33 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : scrambler
+Version: N-2017.09-SP3
+Date   : Wed May  3 11:57:11 2023
+****************************************
+
+Operating Conditions: nom_pvt   Library: lsi_10k
+Wire Load Model Mode: top
+
+  Startpoint: state_reg[3]/CP
+              (internal path startpoint)
+  Endpoint: Output (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  state_reg[3]/CP (FD4)                    0.00       0.00 r
+  state_reg[3]/QN (FD4)                    1.94       1.94 r
+  U8/Z (EO)                                1.06       3.00 f
+  Output (out)                             0.00       3.00 f
+  data arrival time                                   3.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

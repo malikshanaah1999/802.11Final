@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : scrambler
+Version: N-2017.09-SP3
+Date   : Wed May  3 12:01:13 2023
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /Disk2/eda/TSMCLibes/tcbn90ghpSYN/saed90nm_typ.db)
+
+Number of ports:                            4
+Number of nets:                             6
+Number of cells:                            3
+Number of combinational cells:              1
+Number of sequential cells:                 2
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:                 13.824000
+Buf/Inv area:                        0.000000
+Noncombinational area:              31.334400
+Macro/Black Box area:                0.000000
+Net Interconnect area:               0.413752
+
+Total cell area:                    45.158401
+Total area:                         45.572152
+1
